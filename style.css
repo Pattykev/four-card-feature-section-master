@@ -1,0 +1,123 @@
+@font-face{
+    font-family: "poppins";
+    src: url("https://fonts.google.com/specimen/Poppins");
+    font-weight: 200, 400, 600;
+
+}
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Grey-bold: hsl(234, 12%, 34%);
+    --Grey-light: hsl(228, 3%, 62%);
+    --White: hsl(0, 0%, 100%);
+}
+.container-items{
+    font-size: 15px;
+    font-family: "poppins";  
+    margin-top: 0rem;
+}
+.grid-display{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
+    grid-template-rows: 140px 140px 140px 140px;
+    gap: 35px;
+}
+
+h1{
+    text-align: center;
+    line-height: 1.5;
+}
+h1 span{
+    display: block;
+}
+
+h1 #light-title{
+    font-weight:normal;
+}
+.item-card{
+    width: 350px;
+    height: 280px;
+    box-shadow: 0.1rem 0rem 0.1rem var(--Grey-light),  -0.1rem 0rem 0.1rem var(--Grey-light);
+    border-radius: 0.4rem;
+    margin: 3rem 4rem;
+    padding: 1rem 2rem;  
+}
+.item-card img{
+  
+   position: relative;      /* Rend l'élément fixe par rapport à la fenêtre */
+   top: 6rem;            /* Distance du haut de la fenêtre */
+   left: 18rem;  
+}
+h2{
+    margin-top: 20px;
+}
+.team{
+    border: solid 0.3em transparent ;
+    border-top-color: var(--Red);
+    width: 350px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+.supervisor{
+    border: solid 0.3em transparent ;
+    border-top-color: var(--Cyan);
+    width: 350px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.karma{
+    border: solid 0.3em transparent ;
+    border-top-color: var(--Orange);
+    width: 350px;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+.calculator{
+    border: solid 0.3em transparent ;
+    border-top-color: var(--Blue);
+    width: 350px;
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+}
+#description{
+    line-height: 1.5;
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+footer{
+    margin-top: 5rem;;
+}
+@media screen and (max-width: 375px) {
+    .container-items{
+       text-align: center;
+       margin: 1rem 1rem ;
+    }
+    .grid-display{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        margin-left: 1rem;
+    }
+    .item-card{
+        width: 250px;
+        margin-bottom: -2rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .item-card img{
+        position: relative;      
+        top: 4rem;            
+        left: 6rem; 
+     }
+     #description{
+        line-height: 1.5;
+        width: 250px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
